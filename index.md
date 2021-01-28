@@ -127,5 +127,48 @@ lua: os.execute('/bin/sh')
 
 ![](https://xnderlan.github.io/Xender/py.jpg)
 
-### 1.3.1 Basique
+### 1.3.1 Operations basique 
 
+
+Operators | Operation |	Example
+--- | --- | ---
+`**`	| Exponent	| `2 ** 3 = 8`
+`%`	| Modulus/Remainder | `22 % 8 = 6`
+`//`	| Integer division | `22 // 8 = 2`
+`/`	| Division | `22 / 8 = 2.75`
+`*`	| Multiplication | `3 * 3 = 9`
+`-`	| Subtraction | `5 - 2 = 3`
+`+`	| Addition | `2 + 2 = 4`
+
+Comparison Operators
+
+
+Operator | Meaning 
+--- | ---
+`==`	| Equal to 
+`!=`	| Not equal to
+`<`	| Less than
+`>`	| Greater Than
+`<=`	| Less than or Equal to
+`>=	`| Greater than or Equal to
+
+### 1.3.2 Boucle For
+
+```python
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+_________________________________________
+apple
+banana
+cherry
+```
+
+```python
+for x in "abc":
+  print(x)
+_________________________________________
+a
+b
+c
+```
