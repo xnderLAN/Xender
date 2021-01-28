@@ -7,6 +7,8 @@ La plupart des pentest vont se faire sur des plateforme comme [HTB](https://app.
 
 Cette partie est pour but de vous aider sans trop de BlaBla 
 
+***
+
 ### 1.1 Reverse Shell
 
 ![](https://xnderlan.github.io/Xender/img/rev.png)
@@ -110,6 +112,7 @@ Spawner la TTY apres avoir eu un accès
 
 ![](https://xnderlan.github.io/Xender/img/spawn.jpg)
 
+***
 
 ```powershell
 /bin/sh -i
@@ -126,6 +129,8 @@ lua: os.execute('/bin/sh')
 ## 1.3 Python
 
 ![](https://xnderlan.github.io/Xender/py.jpg)
+
+***
 
 ### 1.3.1 Operations basique 
 
@@ -162,13 +167,50 @@ _________________________________________
 apple
 banana
 cherry
-```
 
-```python
 for x in "abc":
   print(x)
 _________________________________________
 a
 b
 c
-```
+
+for x in range(6):
+  print(x)
+  
+for x in range(2, 6):
+  print(x)  #la boucle demarre de 2
+  
+for x in range(2, 30, 3):
+  print(x)  #la boucle demarre de 2 avec une incrementation de 3
+```  
+
+### 1.3.3 Boucle While
+
+```python
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+  
+i = 1
+while i < 6:
+  print(i)
+  if i == 3:
+    break
+  i += 1
+  
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue
+  print(i)
+  
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+else:
+  print("i is no longer less than 6")
+  ```
