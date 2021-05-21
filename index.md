@@ -280,3 +280,6 @@ sh -c "echo \$\$ > /tmp/cgrp/x/cgroup.procs"
 head /output
 ```
 Pour toute autre escalation: [ICI](https://book.hacktricks.xyz/linux-unix/privilege-escalation/docker-breakout)
+
+
+It is important to know that a UDP scan is not able to detect the presence of a firewall or of a filtering system between the scanning machine and the scanned target, which can distort the results obtained
