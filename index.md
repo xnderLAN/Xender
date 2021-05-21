@@ -283,3 +283,6 @@ Pour toute autre escalation: [ICI](https://book.hacktricks.xyz/linux-unix/privil
 
 
 It is important to know that a UDP scan is not able to detect the presence of a firewall or of a filtering system between the scanning machine and the scanned target, which can distort the results obtained
+
+
+Netcat, and not to send to search only listening data services Most known services such as mail, FTP or SSH work on scanned ports 1-1024
